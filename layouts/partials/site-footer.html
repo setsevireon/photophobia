@@ -1,0 +1,3 @@
+<a href="{{ .Site.BaseURL }}" >
+  &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
+</a>

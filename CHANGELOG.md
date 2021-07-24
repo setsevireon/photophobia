@@ -1,0 +1,21 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog][1] and this project adheres to
+[Semantic Versioning][2].
+
+
+## [0.0.1] - 2021-07-24
+
+At this point it is just a boilerplate theme. No styling, no fancy features.
+It is not even dark yet.
+
+I used [Ananke][3] as a starting point, for it is a well structured theme.
+
+
+
+
+[1]: https://keepachangelog.com/en/1.0.0/ "Keep a Changelog"
+[2]: https://semver.org/spec/v2.0.0.html "Semantic Versioning"
+[3]: https://github.com/theNewDynamic/gohugo-theme-ananke "Ananke Theme"

@@ -1,0 +1,15 @@
+{
+	"name": "photophobia",
+	"version": "0.0.1",
+	"description": "A boring dark theme",
+	"repository": "https://github.com/setsevireon/photophobia.git",
+	"author": "setsevireon",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"build": "hugo --source example --debug",
+		"serve": "hugo serve --source example --debug &",
+		"unserve": "pkill hugo",
+		"clean": "rm -fr public example/public server.log"
+	}
+}
