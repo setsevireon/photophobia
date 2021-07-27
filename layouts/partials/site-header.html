@@ -1,0 +1,23 @@
+<div class="container flex justify-between items-center flex-wrap">
+  <div class="text-lg font-bold">
+    <a href="{{ .Site.Home.RelPermalink }}">
+      {{ with .Site.Params.site_logo }}
+      <img src="{{ . }}" alt="{{ $.Site.Title }}" />
+      {{ else }}
+      {{ .Site.Title }}
+      {{ end }}
+    </a>
+  </div>
+  <div class="flex items-center flex-wrap">
+    {{ partial "i18nlist.html" . }}
+    {{ if .Site.Menus.main }}
+    <ul class="flex items-center flex-wrap">
+      {{ range .Site.Menus.main }}
+      <li class="ml-4">
+        <a class="hover:text-white" href="{{ .URL }}" title="{{ .Name }} page">{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+</div>

@@ -1,0 +1,34 @@
+baseURL: https://example.com
+languageCode: en-us
+theme: photophobia
+themesDir: ../..
+resourceDir: ../resources
+
+DefaultContentLanguage: en
+SectionPagesMenu: main
+Paginate: 3
+
+languages:
+  en:
+    title: Latim Jibber Jabber
+    weight: 1
+    contentDir: content/en
+  pt:
+    title: Lero Lero Latim
+    weight: 2
+    contentDir: content/pt
+
+sitemap:
+  changefreq: daily
+  priority: 0.5
+  filename: sitemap.xml
+
+params:
+  favicon: null
+  site_logo: null
+  description: Pellentesque commodo dolor leo.
+  recent_posts_number: 10
+
+markup:
+  highlight:
+    style: native

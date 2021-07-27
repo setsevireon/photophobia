@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "en" }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  {{ hugo.Generator }}
+
+  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+  <meta name="description"
+        content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+
+  {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+  <meta name="robots" content="index, follow">
+  {{ else }}
+  <meta name="robots" content="noindex, nofollow">
+  {{ end }}
+
+  {{ range .AlternativeOutputFormats -}}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+  {{- end }}
+
+  {{ $stylesheet := resources.Get "output/css/main.css"  }}
+  {{ $stylesheet = $stylesheet | fingerprint }}
+  {{ with $stylesheet }}
+  <link href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" rel="stylesheet" crossorigin="anonymous">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,600' rel='stylesheet' type='text/css'>
+  {{end}}  
+
+
+  {{- template "_internal/opengraph.html" . -}}
+  {{- template "_internal/schema.html" . -}}
+  {{- template "_internal/twitter_cards.html" . -}}
+
+  {{ block "head" . }}{{ partial "head-additions.html" . }}{{ end }}
+</head>
+
+<body class="bg-gray-800 font-sans text-gray-400 subpixel-antialiased flex flex-col h-screen justify-between tracking-wide">
+  <header class="bg-gray-700 py-3">
+    {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+  </header>
+  
+  <main class="container mb-auto mt-20">{{ block "main" . }}{{ end }}</main>
+  <footer class="container mt-20 py-10 border-t border-gray-700">
+    {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+  </footer>
+</body>
+
+</html>

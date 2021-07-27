@@ -1,0 +1,14 @@
+allTitle:
+  other: "Todo o {{ .Title }}"
+
+recentTitle:
+  other: "{{.Title }} Recentes"
+
+whatsInThis:
+  other: "O que há neste {{ .Type }}"
+
+related:
+  other: "Artigos Relacionados"
+
+taxonomyPageList:
+  other: "Abaixo você encontrará as páginas que utilizam o termo de taxonomia {{ .Title }}"

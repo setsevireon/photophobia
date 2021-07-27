@@ -1,0 +1,24 @@
+{
+	"name": "photophobia",
+	"version": "0.0.1",
+	"description": "A boring dark theme",
+	"repository": "https://github.com/setsevireon/photophobia.git",
+	"author": "setsevireon",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"build": "NODE_ENV=production gulp",
+		"serve": "hugo server --config config-dev.yaml --source demo --debug",
+		"unserve": "pkill hugo",
+		"clean": "rm -fr public demo/public server.log"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.3.1",
+		"cssnano": "^5.0.7",
+		"gulp": "^4.0.2",
+		"gulp-cli": "^2.3.0",
+		"gulp-postcss": "^9.0.0",
+		"postcss": "^8.3.6",
+		"tailwindcss": "^2.2.7"
+	}
+}

@@ -1,0 +1,33 @@
+{{ define "main" }}
+  <article>{{ .Content }}</article>
+  {{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
+  {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
+  {{ $section_count := len $section }}
+  {{ if ge $section_count 1 }}
+    {{ $section_name := index (.Site.Params.mainSections) 0 }}
+
+    <div>
+      {{ with .Site.GetPage "section" $section_name }}
+        <h3>{{ $.Param "recent_copy" | default (i18n "recentTitle" .) }}</h3>
+      {{ end }}
+
+      {{ $n_posts := $.Param "recent_posts_number" | default 10 }}
+
+      <section>
+        {{ range (first $n_posts $section) }}
+          <div>
+            {{ partial "item.html" . }}
+          </div>
+        {{ end }}
+      </section>
+
+      {{ if ge $section_count (add $n_posts 1) }}
+        <section>
+          {{ with .Site.GetPage "section" $section_name }}
+            <a href="{{ .RelPermalink }}">{{ i18n "allTitle" . }}</a>
+          {{ end }}
+        </section>
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}
