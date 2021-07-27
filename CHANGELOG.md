@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog][1] and this project adheres to
 [Semantic Versioning][2].
 
 
+## [Unreleased]
+
+### Removed
+
+- Google Analytics
+
+
 ## [0.0.1] - 2021-07-24
 
 At this point it is just a boilerplate theme. No styling, no fancy features.

@@ -8,7 +8,7 @@ whatsInThis:
   other: "What's in this {{ .Type }}"
 
 related:
-  other: "Related"
+  other: "Related Articles"
 
 taxonomyPageList:
   other: "Below you will find pages that utilize the taxonomy term {{ .Title }}"

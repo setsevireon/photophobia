@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
+main { @apply text-lg; }
+main p { @apply pb-5; }
+
+main h6 { @apply py-7 font-bold text-xl; }
+main h5 { @apply py-7 font-bold text-xl; }
+main h4 { @apply py-7 font-bold text-2xl; }
+main h3 { @apply py-7 font-bold text-2xl; }
+main h2 { @apply py-7 font-bold text-3xl; }
+main h1 { @apply py-7 font-bold text-4xl; }
+
+.highlight { @apply shadow-2xl rounded-xl; }
+pre { @apply py-5 px-10 rounded-xl; }
+
+blockquote { @apply ml-36 pl-6 border-l-8 border-gray-700 font-serif; }
+
+table { @apply w-full text-left border-collapse; }
+th { @apply font-bold; }
+th, td { @apply py-2 border-b border-gray-500 }
+table>tbody>tr:hover { @apply bg-gray-500 text-gray-50; }
+
+main ol { @apply list-decimal list-inside pl-5; }
+main ul { @apply list-disc list-inside pl-5; }
+
+main a { @apply text-gray-400 bg-black; }
+main a:hover { @apply text-gray-300 bg-gray-900; }
+
+.footnotes { @apply mt-20 text-sm; }
+.footnotes li { @apply flex pt-2; }
+
+.pagination { @apply flex place-content-center text-lg; }
+.pagination ul { @apply flex list-none; }
+.pagination a { @apply px-4 py-2 mx-2 }

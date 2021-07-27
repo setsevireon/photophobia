@@ -3,13 +3,13 @@
     <section>
       {{ .Content }}
     </section>
-    <section>
+    <section class="py-20">
       {{ range .Paginator.Pages }}
         <div>
           {{ partial "item.html" . }}
         </div>
       {{ end }}
     </section>
-    {{ template "_internal/pagination.html" . }}
+    <div class="pagination">{{ template "_internal/pagination.html" . }}</div>
   </article>
 {{ end }}

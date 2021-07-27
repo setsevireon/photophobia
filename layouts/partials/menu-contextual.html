@@ -1,15 +1,8 @@
-{{ if .Params.toc }}
-  <div>
-    <p>{{ i18n "whatsInThis" . }}</p>
-    {{ .TableOfContents }}
-  </div>
-{{ end }}
-
 {{ $related := .Site.RegularPages.Related . | first 15 }}
 
 {{ with $related }}
   <div>
-    <p>{{ i18n "related" }}</p>
+    <h5>{{ i18n "related" }}</h5>
     <ul>
 	    {{ range . }}
 	      <li>

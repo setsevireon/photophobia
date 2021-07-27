@@ -1,6 +1,7 @@
 ---
 title: Markdown Syntax Rendering
 date: 2021-07-24
+author: Hugo Authors
 tags: [markdown, example]
 description: Markdown rendering samples
 ---

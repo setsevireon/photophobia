@@ -7,9 +7,18 @@
 	"license": "MIT",
 	"private": true,
 	"scripts": {
-		"build": "hugo --source example --debug",
+		"build": "NODE_ENV=production gulp",
 		"serve": "hugo serve --source example --debug &",
 		"unserve": "pkill hugo",
 		"clean": "rm -fr public example/public server.log"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.3.1",
+		"cssnano": "^5.0.7",
+		"gulp": "^4.0.2",
+		"gulp-cli": "^2.3.0",
+		"gulp-postcss": "^9.0.0",
+		"postcss": "^8.3.6",
+		"tailwindcss": "^2.2.7"
 	}
 }

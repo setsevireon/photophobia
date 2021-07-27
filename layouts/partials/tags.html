@@ -1,7 +1,7 @@
-<ul>
+<ul class="flex list-none mt-20 ml-0 p-0">
   {{ range .Params.tags }}
-   <li>
-     <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
+   <li class="mr-3">
+     <a class="px-4 py-2" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
        {{ . }}
      </a>
    </li>

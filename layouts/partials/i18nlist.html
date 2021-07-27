@@ -2,7 +2,7 @@
 <ul>
   {{ range .Translations }}
     <li>
-      <a href="{{ .RelPermalink }}">{{ .Lang }}</a>
+      <a class="hover:font-bold" href="{{ .RelPermalink }}">{{ .Lang }}</a>
     </li>
   {{ end}}
 </ul>

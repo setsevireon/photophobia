@@ -7,8 +7,6 @@ resourceDir: ../resources
 DefaultContentLanguage: en
 SectionPagesMenu: main
 Paginate: 3
-googleAnalytics: null
-enableRobotsTXT: true
 
 languages:
   en:
@@ -30,3 +28,7 @@ params:
   site_logo: null
   description: Pellentesque commodo dolor leo.
   recent_posts_number: 10
+
+markup:
+  highlight:
+    style: native

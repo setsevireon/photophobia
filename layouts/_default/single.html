@@ -1,24 +1,26 @@
 {{ define "main" }}
   {{ $section := .Site.GetPage "section" .Section }}
   <article>
-    <header>
-      <h1>{{ .Title }}</h1>
+    <header class="text-center py-20">
+      <h1 class="text-5xl pb-2">{{ .Title }}</h1>
 
-      {{ with .Params.author }}
-        <p>
-          By <strong>
+      <div class="flex place-content-center">
+        {{ with .Params.author }}
+        <p class="pr-5">
+        By <strong>
           {{ if reflect.IsSlice . }}
-            {{ delimit . ", " | markdownify }}
+          {{ delimit . ", " | markdownify }}
           {{else}}
-            {{ . | markdownify }}
+          {{ . | markdownify }}
           {{ end }}
-          </strong>
+        </strong> 
         </p>
-      {{ end }}
+        {{ end }}
 
-      <time {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
-        {{ .Date.Format "January 2, 2006" }}
-      </time>
+        <time {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+          {{ .Date.Format "January 2, 2006" }}
+        </time>
+      </div>
     </header>
 
     <section>
@@ -26,6 +28,6 @@
       {{ partial "tags.html" . }}
     </section>
 
-    <aside>{{ partial "menu-contextual.html" . }}</aside>
+    <div class="mt-20">{{ partial "menu-contextual.html" . }}</div>
   </article>
 {{ end }}
