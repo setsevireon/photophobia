@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog][1] and this project adheres to
 [Semantic Versioning][2].
 
+## [0.0.3] - 2021-07-27
+### Added
+- Dependabot.
+- Demo site using GitHub Actions.
+
+### Changed
+- Fixed Google Fonts not loading.
+
 ## [0.0.2] - 2021-07-27
 ### Added
 - Basic styling using PostCSS, Tailwind and cssnano, plus Gulp to glue
