@@ -1,9 +1,0 @@
-{{ if .IsTranslated }}
-<ul>
-  {{ range .Translations }}
-    <li>
-      <a class="hover:font-bold" href="{{ .RelPermalink }}">{{ .Lang }}</a>
-    </li>
-  {{ end}}
-</ul>
-{{ end }}
