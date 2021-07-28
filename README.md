@@ -1,7 +1,8 @@
- README.md+                                                                                                                           buffers
 # Photophobia
 
 A boring dark theme for [Hugo][1].
+
+![screenshot](https://raw.githubusercontent.com/setsevireon/photophobia/master/images/screenshot.png)
 
 ## Installation
 

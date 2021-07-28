@@ -3,7 +3,7 @@ license = "MIT"
 licenselink = "https://github.com/setsevireon/photophobia/blob/master/LICENSE"
 description = "A boring dark theme"
 homepage = "https://github.com/setsevireon/photophobia"
-tags = ["dark", "blog", "responsive", "multilingual"]
+tags = ["dark", "blog", "multilingual"]
 features = ["posts", "dark", "related content". "multilingual"]
 min_version = "0.80.0"
 
