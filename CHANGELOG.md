@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog][1] and this project adheres to
 [Semantic Versioning][2].
 
+## [0.0.6] - 2021-08-18
+### Added
+- Support to Google Analytics
+
+## [0.0.5] - 2021-07-28
+### Fixed
+- Fix syntax error in theme.toml
+
 ## [0.0.4] - 2021-07-27
 ### Added
 - Add to themes.gohugo.io

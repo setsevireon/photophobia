@@ -5,6 +5,7 @@ theme: github.com/setsevireon/photophobia
 DefaultContentLanguage: en
 SectionPagesMenu: main
 Paginate: 3
+googleAnalytics: ""
 
 languages:
   en:
