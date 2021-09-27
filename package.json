@@ -19,7 +19,7 @@
 		"gulp-cli": "^2.3.0",
 		"gulp-postcss": "^9.0.1",
 		"postcss": "^8.3.8",
-		"tailwindcss": "^2.2.15"
+		"tailwindcss": "^2.2.16"
 	},
 	"resolutions": {
 		"glob-parent": "^6.0.1",
