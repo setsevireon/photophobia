@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog][1] and this project adheres to
 [Semantic Versioning][2].
 
+## [0.0.7] - 2022-02-08
+### Changed
+- Edited the SVG for the Creative Commons icons.
+- Updated Tailwind configuration.
+
 ## [0.0.6] - 2021-08-18
 ### Added
 - Support to Google Analytics
