@@ -1,6 +1,5 @@
 module.exports = {
-	purge: { content: [ './layouts/**/*.html' ] },
-	darkMode: false,
+	content: [ './layouts/**/*.html' ],
 	theme: { 
 		container: {
 			center: true,
