@@ -13,7 +13,7 @@
 		"clean": "rm -fr public demo/public server.log"
 	},
 	"devDependencies": {
-		"autoprefixer": "^10.4.2",
+		"autoprefixer": "^10.4.4",
 		"cssnano": "^5.0.17",
 		"gulp": "^4.0.2",
 		"gulp-cli": "^2.3.0",
