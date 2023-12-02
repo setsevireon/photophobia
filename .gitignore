@@ -1,11 +1,2 @@
 node_modules/
-yarn-error.log
-
-# migrating to Yarn 2
-.yarn/*
-!.yarn/patches
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
+demo/.hugo_build.lock
