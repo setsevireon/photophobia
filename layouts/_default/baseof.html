@@ -25,8 +25,8 @@
   {{ $stylesheet = $stylesheet | fingerprint }}
   {{ with $stylesheet }}
   <link href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" rel="stylesheet" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Raleway:400,200,600' rel='stylesheet' type='text/css'>
   {{end}}  
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
 
   {{- template "_internal/opengraph.html" . -}}
@@ -40,13 +40,13 @@
   {{ block "head" . }}{{ partial "head-additions.html" . }}{{ end }}
 </head>
 
-<body class="bg-gray-800 font-sans text-gray-400 subpixel-antialiased flex flex-col h-screen justify-between tracking-wide">
-  <header class="bg-gray-700 py-3">
+<body class="bg-nord0 font-sans text-nord6 subpixel-antialiased flex flex-col h-screen justify-between tracking-wide">
+  <header class="bg-nord1 py-3">
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
   </header>
   
   <main class="container mb-auto mt-20">{{ block "main" . }}{{ end }}</main>
-  <footer class="container mt-20 py-10 border-t border-gray-700">
+  <footer class="container mt-20 py-10 border-t border-nord2">
     {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
   </footer>
 </body>
