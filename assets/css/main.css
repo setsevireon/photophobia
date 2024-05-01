@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
-
 main { @apply text-lg; }
 main p { @apply pb-5; }
 
@@ -16,21 +14,21 @@ main h3 { @apply py-7 font-bold text-2xl; }
 main h2 { @apply py-7 font-bold text-3xl; }
 main h1 { @apply py-7 font-bold text-4xl; }
 
-.highlight { @apply shadow-2xl rounded-xl my-5; }
-pre { @apply py-5 px-10 rounded-xl overflow-auto;}
+.highlight { @apply shadow-xl rounded-lg my-5; }
+pre { @apply py-5 px-10 rounded-lg overflow-auto;}
 
-blockquote { @apply ml-36 pl-6 border-l-8 border-gray-700 font-serif; }
+blockquote { @apply ml-16 pl-6 border-l-8 border-nord2; }
 
 table { @apply w-full text-left border-collapse; }
 th { @apply font-bold; }
-th, td { @apply py-2 border-b border-gray-500 }
-table>tbody>tr:hover { @apply bg-gray-500 text-gray-50; }
+th, td { @apply py-2 border-b border-nord2 }
+table>tbody>tr:hover { @apply bg-nord3 text-nord6; }
 
 main ol { @apply list-decimal list-inside pl-5; }
 main ul { @apply list-disc list-inside pl-5; }
 
-main a { @apply text-gray-400 bg-black; }
-main a:hover { @apply text-gray-300 bg-gray-900; }
+main a { @apply text-nord4 bg-nord2; }
+main a:hover { @apply text-nord5 bg-nord3; }
 
 .footnotes { @apply mt-20 text-sm; }
 .footnotes li { @apply flex pt-2; }

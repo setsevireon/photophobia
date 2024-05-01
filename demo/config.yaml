@@ -30,4 +30,4 @@ params:
 
 markup:
   highlight:
-    style: native
+    style: nord
