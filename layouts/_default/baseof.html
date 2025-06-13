@@ -38,6 +38,10 @@
   {{ end }}
 
   {{ block "head" . }}{{ partial "head-additions.html" . }}{{ end }}
+
+  {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
 </head>
 
 <body class="bg-nord0 font-sans text-nord6 subpixel-antialiased flex flex-col h-screen justify-between tracking-wide">

@@ -17,7 +17,8 @@ main h1 { @apply py-7 font-bold text-4xl; }
 .highlight { @apply shadow-xl rounded-lg my-5; }
 pre { @apply py-5 px-10 rounded-lg overflow-auto;}
 
-blockquote { @apply ml-16 pl-6 border-l-8 border-nord2; }
+blockquote { @apply mb-5 pl-3 py-2 border-l-4 border-nord4 bg-nord2 rounded italic; }
+blockquote p { @apply pb-0; }
 
 table { @apply w-full text-left border-collapse; }
 th { @apply font-bold; }

@@ -1,18 +1,35 @@
 {{ define "main" }}
-  <article>
-    <div>{{ .Content }}</div>
+<article>
+  <div>{{ .Content }}</div>
 
-    <section>
-      {{ range $key, $value := .Data.Terms }}
-        <h2>
-          <a href="{{ "/" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}">
-            {{ $.Data.Singular | humanize }}: {{ $key }}
-          </a>
-        </h2>
-        {{ range $value.Pages }}
-          {{ partial "item.html" . }}
+  <section>
+    {{ range $key, $value := .Data.Terms }}
+
+      {{ $url := printf "/%s/%s" $.Data.Plural $key | relLangURL }}
+
+      <h2>
+        <i>
+          {{ $key }}
+        </i>
+      </h2>
+
+      {{ $n_posts := $.Param "taxonomy_list_number" | default 5 }}
+      
+      {{ $pages := first $n_posts $value.Pages }}
+      <section>
+        {{ range $pages }}
+          <div>{{ partial "item.html" . }}</div>
         {{ end }}
+      </section>
+
+      {{ if ge (len $value.Pages) (add $n_posts 1) }}
+        <section>
+          <a href="{{ "/" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}">
+            {{(sub (len $value.Pages) $n_posts) }} more post(s)...
+          </a>
+        </section>
       {{ end }}
-    </section>
-  </article>
+    {{ end }}
+  </section>
+</article>
 {{ end }}
